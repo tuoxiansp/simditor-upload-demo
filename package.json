@@ -1,0 +1,12 @@
+{
+  "name": "Slimditor-upload-Demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "kebin@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.2",
+    "formidable": "^1.0.17"
+  }
+}

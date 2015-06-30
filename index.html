@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/simditor/styles/simditor.css"/>
+    <link rel="stylesheet" href="bower_components/simditor-emoji/styles/simditor-emoji.css"/>
+</head>
+<body>
+
+<textarea id="editor" autofocus></textarea>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/simple-module/lib/module.js"></script>
+<script src="bower_components/simple-hotkeys/lib/hotkeys.js"></script>
+<script src="bower_components/simple-uploader/lib/uploader.js"></script>
+<script src="bower_components/simditor/lib/simditor.js"></script>
+<script src="bower_components/simditor-emoji/lib/simditor-emoji.js"></script>
+<script src="bower_components/simditor-markdown/lib/simditor-markdown.js"></script>
+<script>
+    var editor = new Simditor({
+        textarea: $('#editor'),
+        toolbar :[
+            'title',
+            'bold',
+            'underline',
+            'strikethrough',
+            'color',
+            'ol', 'ul',
+            'blockquote',
+            'code',
+            'table',
+            'link',
+            'image',
+            'hr',
+            'indent', 'outdent',
+            'emoji'
+        ],
+        upload : {
+            'url' : '/upload',
+            'fileKey' : 'upfile',
+            'connectionCount' : 4
+        },
+        pasteImage: true,
+        emoji: {
+            imagePath: '/bower_components/simditor-emoji/images/emoji/'
+        },
+        markdown: true
+    });
+</script>
+</body>
+</html>
